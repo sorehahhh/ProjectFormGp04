@@ -24,6 +24,9 @@ Partial Class StudentForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentForm))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.FemaleRadioButton = New System.Windows.Forms.RadioButton()
+        Me.MaleRadioButton = New System.Windows.Forms.RadioButton()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.dobDateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.nameTextBox = New System.Windows.Forms.TextBox()
         Me.classComboBox = New System.Windows.Forms.ComboBox()
@@ -38,15 +41,24 @@ Partial Class StudentForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.MaleRadioButton = New System.Windows.Forms.RadioButton()
-        Me.FemaleRadioButton = New System.Windows.Forms.RadioButton()
+        Me.PostcodeTextBox = New System.Windows.Forms.TextBox()
+        Me.Address2TextBox = New System.Windows.Forms.TextBox()
+        Me.Address1TextBox = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.PostcodeTextBox)
+        Me.GroupBox1.Controls.Add(Me.Address2TextBox)
+        Me.GroupBox1.Controls.Add(Me.Address1TextBox)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.FemaleRadioButton)
         Me.GroupBox1.Controls.Add(Me.MaleRadioButton)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -66,13 +78,44 @@ Partial Class StudentForm
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Nirmala UI", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(80, 38)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.GroupBox1.Size = New System.Drawing.Size(682, 504)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6)
+        Me.GroupBox1.Size = New System.Drawing.Size(989, 504)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Information"
+        '
+        'FemaleRadioButton
+        '
+        Me.FemaleRadioButton.AutoSize = True
+        Me.FemaleRadioButton.Location = New System.Drawing.Point(337, 209)
+        Me.FemaleRadioButton.Name = "FemaleRadioButton"
+        Me.FemaleRadioButton.Size = New System.Drawing.Size(104, 34)
+        Me.FemaleRadioButton.TabIndex = 24
+        Me.FemaleRadioButton.TabStop = True
+        Me.FemaleRadioButton.Text = "Female"
+        Me.FemaleRadioButton.UseVisualStyleBackColor = True
+        '
+        'MaleRadioButton
+        '
+        Me.MaleRadioButton.AutoSize = True
+        Me.MaleRadioButton.Location = New System.Drawing.Point(225, 209)
+        Me.MaleRadioButton.Name = "MaleRadioButton"
+        Me.MaleRadioButton.Size = New System.Drawing.Size(82, 34)
+        Me.MaleRadioButton.TabIndex = 23
+        Me.MaleRadioButton.TabStop = True
+        Me.MaleRadioButton.Text = "Male"
+        Me.MaleRadioButton.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(9, 211)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(89, 30)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "Gender"
         '
         'dobDateTimePicker1
         '
@@ -200,43 +243,63 @@ Partial Class StudentForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Matric Number"
         '
-        'Label4
+        'PostcodeTextBox
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 211)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 30)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "Gender"
+        Me.PostcodeTextBox.BackColor = System.Drawing.Color.SeaShell
+        Me.PostcodeTextBox.Location = New System.Drawing.Point(683, 159)
+        Me.PostcodeTextBox.Name = "PostcodeTextBox"
+        Me.PostcodeTextBox.Size = New System.Drawing.Size(262, 36)
+        Me.PostcodeTextBox.TabIndex = 30
         '
-        'MaleRadioButton
+        'Address2TextBox
         '
-        Me.MaleRadioButton.AutoSize = True
-        Me.MaleRadioButton.Location = New System.Drawing.Point(225, 209)
-        Me.MaleRadioButton.Name = "MaleRadioButton"
-        Me.MaleRadioButton.Size = New System.Drawing.Size(82, 34)
-        Me.MaleRadioButton.TabIndex = 23
-        Me.MaleRadioButton.TabStop = True
-        Me.MaleRadioButton.Text = "Male"
-        Me.MaleRadioButton.UseVisualStyleBackColor = True
+        Me.Address2TextBox.BackColor = System.Drawing.Color.SeaShell
+        Me.Address2TextBox.Location = New System.Drawing.Point(683, 111)
+        Me.Address2TextBox.Name = "Address2TextBox"
+        Me.Address2TextBox.Size = New System.Drawing.Size(262, 36)
+        Me.Address2TextBox.TabIndex = 29
         '
-        'FemaleRadioButton
+        'Address1TextBox
         '
-        Me.FemaleRadioButton.AutoSize = True
-        Me.FemaleRadioButton.Location = New System.Drawing.Point(337, 209)
-        Me.FemaleRadioButton.Name = "FemaleRadioButton"
-        Me.FemaleRadioButton.Size = New System.Drawing.Size(104, 34)
-        Me.FemaleRadioButton.TabIndex = 24
-        Me.FemaleRadioButton.TabStop = True
-        Me.FemaleRadioButton.Text = "Female"
-        Me.FemaleRadioButton.UseVisualStyleBackColor = True
+        Me.Address1TextBox.BackColor = System.Drawing.Color.SeaShell
+        Me.Address1TextBox.Location = New System.Drawing.Point(683, 60)
+        Me.Address1TextBox.Name = "Address1TextBox"
+        Me.Address1TextBox.Size = New System.Drawing.Size(259, 36)
+        Me.Address1TextBox.TabIndex = 28
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(486, 161)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(108, 30)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "Postcode"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(486, 111)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(116, 30)
+        Me.Label9.TabIndex = 26
+        Me.Label9.Text = "Address 2"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(486, 63)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(116, 30)
+        Me.Label10.TabIndex = 25
+        Me.Label10.Text = "Address 1"
         '
         'StudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(913, 518)
+        Me.ClientSize = New System.Drawing.Size(1135, 518)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "StudentForm"
         Me.Text = "StudentForm"
@@ -264,4 +327,10 @@ Partial Class StudentForm
     Friend WithEvents FemaleRadioButton As RadioButton
     Friend WithEvents MaleRadioButton As RadioButton
     Friend WithEvents Label4 As Label
+    Friend WithEvents PostcodeTextBox As TextBox
+    Friend WithEvents Address2TextBox As TextBox
+    Friend WithEvents Address1TextBox As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
 End Class

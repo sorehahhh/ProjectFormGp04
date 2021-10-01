@@ -3,31 +3,28 @@
     ' Dim theSubjectGroupRecord As SubjectGroupRecord
     Dim OldSubjectRec As SubjectRecord
 
-
-    Friend Sub prepareToUpdateSubject(subjectMatric As String)
-        MessageBox.Show("to update studnet with subject Code" & subjectMatric)
+    Friend Sub prepareToUpdateSubject(subjectCode As String)
+        MessageBox.Show("to update student with subject Code" & subjectCode)
         With Me
             .AddUpdateButton.Text = "Update"
         End With
-        displayExistingSubjectInfo(subjectMatric)
+        displayExistingSubjectInfo(subjectCode)
     End Sub
 
-    Private Sub displayExistingSubjectInfo(subjectMatric As String)
+    Private Sub displayExistingSubjectInfo(subjectCode As String)
         Try
-            OldSubjectRec = mySubject.getSubjectRecord(subjectMatric)
+            OldSubjectRec = mySubject.getSubjectRecord(subjectCode)
             With Me
                 .nameTextBox.Text = OldSubjectRec.name
                 MessageBox.Show(OldSubjectRec.credit.ToString)
                 'displayLevel(OldSubjectGroupRec.groupLevel) 'to check suitable radio button
                 '.dobDateTimePicker1.CustomFormat = "dd-MM-yyyy"
                 .creditTextBox.Text = OldSubjectRec.credit
-                .classComboBox.Text = OldSubjectRec.classGroup
-
+                .subjectCodeTextBox.Text = OldSubjectRec.subjectCode
             End With
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
-
     End Sub
     Friend Sub prepareToAddNewSubject()
         clearSubjectForm()
@@ -50,9 +47,7 @@
             .subjectCode = subjectCodeTextBox.Text
             .name = nameTextBox.Text
             .credit = creditTextBox.Text
-            .classGroup = classComboBox.Text
         End With
-
         addOk = mySubject.addSubject(theNewSubjectRec)
         If addOk Then
             messageString = "New subject with subject code : " & theNewSubjectRec.subjectCode & " has been added"
@@ -64,8 +59,7 @@
         With Me
             .subjectCodeTextBox.Clear()
             .nameTextBox.Clear()
-
-            .classComboBox.Text = ""
+            '.classComboBox.Text = ""
         End With
     End Sub
 
@@ -79,7 +73,6 @@
         theNewSubjectRec.subjectCode = subjectCodeTextBox.Text
         theNewSubjectRec.name = nameTextBox.Text
         theNewSubjectRec.credit = creditTextBox.Text
-        theNewSubjectRec.classGroup = classComboBox.Text
         updateOk = mySubject.updateThisSubject(oldSubjectRec, theNewSubjectRec)
         If updateOk Then
             messageString = "Subject with subjectCode : " & theNewSubjectRec.subjectCode & " has been updated"

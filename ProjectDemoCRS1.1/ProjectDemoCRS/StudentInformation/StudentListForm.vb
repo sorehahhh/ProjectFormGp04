@@ -1,4 +1,5 @@
-﻿Public Class StudentListForm
+﻿Imports System.Drawing.Printing
+Public Class StudentListForm
     Public conn As New OleDb.OleDbConnection
     Dim ds As New DataSet
     Dim dataAdapter As New OleDb.OleDbDataAdapter
@@ -118,5 +119,9 @@
 
     Private Sub displayAllButton_Click(sender As Object, e As EventArgs) Handles displayAllButton.Click
         displayAllStudent()
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim db As New Bitmap
     End Sub
 End Class

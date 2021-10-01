@@ -21,13 +21,16 @@
     Private Sub SubjectListToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles SubjectListToolStripMenuItem.Click
         SubjectListForm.ShowDialog()
     End Sub
-
-
     Private Sub AddTeacherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddTeacherToolStripMenuItem.Click
         TeacherForm.ShowDialog()
     End Sub
 
     Private Sub StudentList2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentList2ToolStripMenuItem.Click
         StudentForm2.ShowDialog()
+    End Sub
+
+    Private Sub StudentInformationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentInformationToolStripMenuItem.Click
+        StudentForm.prepareToAddNewStudent()
+        StudentForm.ShowDialog()
     End Sub
 End Class

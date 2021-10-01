@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Friend Structure TeacherRecord
-    Dim id, ic, name, email, phone, classGroup As String
+    Dim id, ic, name, email, phone, gender, subject As String
     Dim dob As Date
 End Structure
 Public Class Teacher
@@ -13,7 +13,7 @@ Public Class Teacher
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "select * FROM teacher WHERE (idNumber = '" & id & "')"
+            sql = "select * FROM teacher WHERE (idTeacher = '" & id & "')"
 
             MessageBox.Show(sql)
             Debug.WriteLine(sql)
@@ -22,10 +22,12 @@ Public Class Teacher
             If dr.HasRows Then
                 dr.Read()
                 teacherRec.ic = dr("icNumber").ToString
-                teacherRec.id = dr("idNumber").ToString
+                teacherRec.id = dr("idTeacher").ToString
                 teacherRec.name = dr("name").ToString
-                teacherRec.classGroup = dr("groupId").ToString
+                teacherRec.gender = dr("gender").ToString
+                teacherRec.subject = dr("subjectCode").ToString
                 teacherRec.dob = dr("dateOfBirth")
+                teacherRec.phone = dr("phoneNumber").ToString
                 con.Close()
                 Return teacherRec
             End If
@@ -48,9 +50,9 @@ Public Class Teacher
                 MsgBox("error connecting to database")
                 Exit Function
             End If
-            sql = "insert into teacher(idNumber,icNumber,name,dateOfBirth,groupId)"
-            sql = sql & " values('" & newTeacherRec.id & "','" & newTeacherRec.ic & "','" & newTeacherRec.name & "','" & newTeacherRec.dob & "','" & newTeacherRec.classGroup & "')"
-            'insert into teacher(idNumber,icNumber,name,dateOfBirth,groupId) values('M1002','','Ahmad','1/9/2021 4:29:14 PM','P1_MERAH')
+            sql = "insert into teacher(idTeacher,icNumber,name,gender,dateOfBirth,phoneNumber,subjectCode)"
+            sql = sql & " values('" & newTeacherRec.id & "','" & newTeacherRec.ic & "','" & newTeacherRec.name & "','" & newTeacherRec.gender & "','" & newTeacherRec.dob & "','" & newTeacherRec.phone & "','" & newTeacherRec.subject & "')"
+            'insert into teacher(idTeacher,icNumber,name,dateOfBirth,groupId) values('M1002','','Ahmad','1/9/2021 4:29:14 PM','P1_MERAH')
             MessageBox.Show(sql)
             Debug.WriteLine(sql)
             Dim cmd As New OleDbCommand(sql, con)
@@ -72,12 +74,15 @@ Public Class Teacher
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
 
-            sql = "update teacher set idNumber ='" & newTeacherRec.id & "',"
+            sql = "update teacher set idTeacher ='" & newTeacherRec.id & "',"
             sql = sql & " icNumber ='" & newTeacherRec.ic & "',"
             sql = sql & " name ='" & newTeacherRec.name & "',"
+            sql = sql & " gender ='" & newTeacherRec.gender & "',"
             sql = sql & " dateOfBirth ='" & newTeacherRec.dob & "',"
-            sql = sql & " groupId ='" & newTeacherRec.classGroup & "'"
-            sql = sql & " where idNumber ='" & oldTeacherRec.id & "'"
+            sql = sql & " subjectCode ='" & newTeacherRec.subject & "',"
+            sql = sql & " phoneNumber ='" & newTeacherRec.phone & "'"
+
+            sql = sql & " where idTeacher ='" & oldTeacherRec.id & "'"
             MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()
@@ -96,7 +101,7 @@ Public Class Teacher
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "DELETE FROM teacher WHERE (idNumber = '" & id & "')"
+            sql = "DELETE FROM teacher WHERE (idTeacher = '" & id & "')"
             MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()

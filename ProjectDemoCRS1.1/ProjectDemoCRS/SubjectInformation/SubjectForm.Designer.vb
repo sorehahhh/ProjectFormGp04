@@ -29,8 +29,6 @@ Partial Class SubjectForm
         Me.AddUpdateButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.classComboBox = New System.Windows.Forms.ComboBox()
         Me.nameTextBox = New System.Windows.Forms.TextBox()
         Me.creditTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -66,7 +64,7 @@ Partial Class SubjectForm
         '
         Me.AddUpdateButton.BackColor = System.Drawing.Color.Crimson
         Me.AddUpdateButton.ForeColor = System.Drawing.Color.AliceBlue
-        Me.AddUpdateButton.Location = New System.Drawing.Point(193, 399)
+        Me.AddUpdateButton.Location = New System.Drawing.Point(190, 216)
         Me.AddUpdateButton.Name = "AddUpdateButton"
         Me.AddUpdateButton.Size = New System.Drawing.Size(117, 53)
         Me.AddUpdateButton.TabIndex = 6
@@ -77,7 +75,7 @@ Partial Class SubjectForm
         '
         Me.CancelButton.BackColor = System.Drawing.Color.Crimson
         Me.CancelButton.ForeColor = System.Drawing.Color.AliceBlue
-        Me.CancelButton.Location = New System.Drawing.Point(360, 399)
+        Me.CancelButton.Location = New System.Drawing.Point(357, 216)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(117, 53)
         Me.CancelButton.TabIndex = 7
@@ -92,23 +90,6 @@ Partial Class SubjectForm
         Me.Label5.Size = New System.Drawing.Size(77, 30)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Credit"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(9, 183)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(65, 30)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Class"
-        '
-        'classComboBox
-        '
-        Me.classComboBox.FormattingEnabled = True
-        Me.classComboBox.Location = New System.Drawing.Point(203, 183)
-        Me.classComboBox.Name = "classComboBox"
-        Me.classComboBox.Size = New System.Drawing.Size(262, 38)
-        Me.classComboBox.TabIndex = 19
         '
         'nameTextBox
         '
@@ -129,8 +110,6 @@ Partial Class SubjectForm
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Info
         Me.GroupBox1.Controls.Add(Me.creditTextBox)
         Me.GroupBox1.Controls.Add(Me.nameTextBox)
-        Me.GroupBox1.Controls.Add(Me.classComboBox)
-        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.CancelButton)
         Me.GroupBox1.Controls.Add(Me.AddUpdateButton)
@@ -168,8 +147,6 @@ Partial Class SubjectForm
     Friend WithEvents AddUpdateButton As Button
     Friend WithEvents CancelButton As Button
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents classComboBox As ComboBox
     Friend WithEvents nameTextBox As TextBox
     Friend WithEvents creditTextBox As TextBox
     Friend WithEvents GroupBox1 As GroupBox

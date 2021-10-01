@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Friend Structure SubjectRecord
-    Dim subjectCode, name, credit, classGroup As String
+    Dim subjectCode, name, credit As String
     ' Dim dob As Date
 End Structure
 Public Class Subject
@@ -13,7 +13,7 @@ Public Class Subject
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "select * FROM subject WHERE (subjectCodeNumber = '" & subjectCode & "')"
+            sql = "select * FROM subject WHERE (subjectCode = '" & subjectCode & "')"
 
             MessageBox.Show(sql)
             Debug.WriteLine(sql)
@@ -21,9 +21,8 @@ Public Class Subject
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
                 dr.Read()
-                subjectRec.subjectCode = dr("subjectCodeNumber").ToString
-                subjectRec.name = dr("name").ToString
-                subjectRec.classGroup = dr("groupId").ToString
+                subjectRec.subjectCode = dr("subjectCode").ToString
+                subjectRec.name = dr("subjectName").ToString
                 subjectRec.credit = dr("credit")
                 con.Close()
                 Return subjectRec
@@ -47,9 +46,9 @@ Public Class Subject
                 MsgBox("error connecting to database")
                 Exit Function
             End If
-            sql = "insert into subject(subjectCodeNumber,name,credit,groupId)"
-            sql = sql & " values('" & newSubjectRec.subjectCode & "','" & newSubjectRec.name & "','" & newSubjectRec.credit & "','" & newSubjectRec.classGroup & "')"
-            'insert into subject(subjectCodeNumber,name,credit,groupId) values('M1002','','Ahmad','1/9/2021 4:29:14 PM','P1_MERAH')
+            sql = "insert into subject (subjectCode,subjectName,credit)"
+            sql = sql & " values('" & newSubjectRec.subjectCode & "','" & newSubjectRec.name & "','" & newSubjectRec.credit & "')"
+            'insert into subject(subjectCode,name,credit,groupId) values('M1002','','Ahmad','1/9/2021 4:29:14 PM','P1_MERAH')
             MessageBox.Show(sql)
             Debug.WriteLine(sql)
             Dim cmd As New OleDbCommand(sql, con)
@@ -71,11 +70,10 @@ Public Class Subject
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
 
-            sql = "update subject set subjectCodeNumber ='" & newSubjectRec.subjectCode & "',"
-            sql = sql & " name ='" & newSubjectRec.name & "',"
-            sql = sql & " credit ='" & newSubjectRec.credit & "',"
-            sql = sql & " groupId ='" & newSubjectRec.classGroup & "'"
-            sql = sql & " where subjectCodeNumber ='" & oldSubjectRec.subjectCode & "'"
+            sql = "update subject set subjectCode ='" & newSubjectRec.subjectCode & "',"
+            sql = sql & " subjectName ='" & newSubjectRec.name & "',"
+            sql = sql & " credit ='" & newSubjectRec.credit & "'"
+            sql = sql & " where subjectCode ='" & oldSubjectRec.subjectCode & "'"
             MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()
@@ -94,7 +92,7 @@ Public Class Subject
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "DELETE FROM subject WHERE (subjectCodeNumber = '" & subjectCode & "')"
+            sql = "DELETE FROM subject WHERE (subjectCode = '" & subjectCode & "')"
             MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()

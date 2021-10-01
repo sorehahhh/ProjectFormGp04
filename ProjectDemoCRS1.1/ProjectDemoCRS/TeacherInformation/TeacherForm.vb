@@ -2,10 +2,8 @@
     Dim myTeacher As New Teacher
     ' Dim theTeacherGroupRecord As TeacherGroupRecord
     Dim OldTeacherRec As TeacherRecord
-
-
     Friend Sub prepareToUpdateTeacher(teacherId As String)
-        MessageBox.Show("to update studnet with id" & teacherId)
+        MessageBox.Show("to update teacher with id" & teacherId)
         With Me
             .AddUpdateButton.Text = "Update"
         End With
@@ -19,12 +17,13 @@
                 .icNumberTextBox.Text = OldTeacherRec.ic
                 .IdTextBox.Text = OldTeacherRec.id
                 .nameTextBox.Text = OldTeacherRec.name
+                .nameTextBox.Text = OldTeacherRec.name
                 MessageBox.Show(OldTeacherRec.dob.Date.ToString)
                 'displayLevel(OldTeacherGroupRec.groupLevel) 'to check suitable radio button
                 '.dobDateTimePicker1.CustomFormat = "dd-MM-yyyy"
                 .dobDateTimePicker1.Value = OldTeacherRec.dob.Date
                 .PhoneNumberTextBox.Text = OldTeacherRec.phone
-                .classComboBox.Text = OldTeacherRec.classGroup
+                .subjectCodeBox.Text = OldTeacherRec.subject
 
             End With
         Catch ex As Exception
@@ -52,9 +51,11 @@
         With theNewTeacherRec
             .ic = icNumberTextBox.Text
             .id = IdTextBox.Text
+            .gender = getLevelFromRadioButton()
             .name = nameTextBox.Text
             .dob = dobDateTimePicker1.Value
-            .classGroup = classComboBox.Text
+            .phone = PhoneNumberTextBox.Text
+            .subject = subjectCodeBox.Text
         End With
 
         addOk = myTeacher.addTeacher(theNewTeacherRec)
@@ -70,7 +71,7 @@
             .icNumberTextBox.Clear()
             .nameTextBox.Clear()
 
-            .classComboBox.Text = ""
+            .subjectCodeBox.Text = ""
         End With
     End Sub
 
@@ -82,15 +83,33 @@
         Dim updateOk As Boolean
         Dim messageString As String
         theNewTeacherRec.id = IdTextBox.Text
+        theNewTeacherRec.ic = icNumberTextBox.Text
         theNewTeacherRec.name = nameTextBox.Text
+        theNewTeacherRec.gender = getLevelFromRadioButton() 'levelTextBox.Text
         theNewTeacherRec.dob = dobDateTimePicker1.Value
-        theNewTeacherRec.classGroup = classComboBox.Text
+        theNewTeacherRec.phone = PhoneNumberTextBox.Text
+        theNewTeacherRec.subject = subjectCodeBox.Text
         updateOk = myTeacher.updateThisTeacher(oldTeacherRec, theNewTeacherRec)
         If updateOk Then
             messageString = "Teacher with id : " & theNewTeacherRec.id & " has been updated"
             MessageBox.Show(messageString, "Update", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
         End If
+    End Sub
+    Private Function getLevelFromRadioButton() As String
+        If MaleRadioButton.Checked Then
+            Return "MALE"
+        Else
+            Return "FEMALE"
+        End If
+    End Function
+    Private Sub displayLevel(level As String)
+        If level = "MALE" Then
+            MaleRadioButton.Checked = True
+        Else
+            FemaleRadioButton.Checked = True
+        End If
+
     End Sub
 
 End Class
