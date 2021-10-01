@@ -21,7 +21,6 @@
                 'displayLevel(OldSubjectGroupRec.groupLevel) 'to check suitable radio button
                 '.dobDateTimePicker1.CustomFormat = "dd-MM-yyyy"
                 .creditTextBox.Text = OldSubjectRec.credit
-                .PhoneNumberTextBox.Text = OldSubjectRec.phone
                 .classComboBox.Text = OldSubjectRec.classGroup
 
             End With

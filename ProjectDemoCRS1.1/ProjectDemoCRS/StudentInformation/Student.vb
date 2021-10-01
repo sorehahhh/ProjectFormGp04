@@ -13,7 +13,7 @@ Public Class Student
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "select * FROM subject WHERE (matricNumber = '" & matric & "')"
+            sql = "select * FROM student WHERE (matricNumber = '" & matric & "')"
 
             MessageBox.Show(sql)
             Debug.WriteLine(sql)
@@ -30,7 +30,7 @@ Public Class Student
                 Return studentRec
             End If
         Catch
-            MessageBox.Show("Error accessing subject record for subject with matric :" & matric)
+            MessageBox.Show("Error accessing student record for subject with matric :" & matric)
             con.Close()
             Return studentRec
         End Try
@@ -48,7 +48,7 @@ Public Class Student
                 MsgBox("error connecting to database")
                 Exit Function
             End If
-            sql = "insert into subject(matricNumber,icNumber,name,dateOfBirth,groupId)"
+            sql = "insert into student(matricNumber,icNumber,name,dateOfBirth,groupId)"
             sql = sql & " values('" & newStudentRec.matric & "','" & newStudentRec.ic & "','" & newStudentRec.name & "','" & newStudentRec.dob & "','" & newStudentRec.classGroup & "')"
             'insert into subject(matricNumber,icNumber,name,dateOfBirth,groupId) values('M1002','','Ahmad','1/9/2021 4:29:14 PM','P1_MERAH')
             MessageBox.Show(sql)
@@ -59,7 +59,7 @@ Public Class Student
             Return True
         Catch ex As Exception
 
-            MessageBox.Show("Error adding new subject record. Message:" & ex.ToString)
+            MessageBox.Show("Error adding new student record. Message:" & ex.ToString)
             con.Close()
             Return False
         End Try
@@ -72,7 +72,7 @@ Public Class Student
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
 
-            sql = "update subject set matricNumber ='" & newStudentRec.matric & "',"
+            sql = "update student set matricNumber ='" & newStudentRec.matric & "',"
             sql = sql & " icNumber ='" & newStudentRec.ic & "',"
             sql = sql & " name ='" & newStudentRec.name & "',"
             sql = sql & " dateOfBirth ='" & newStudentRec.dob & "',"
@@ -96,7 +96,7 @@ Public Class Student
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "DELETE FROM subject WHERE (matricNumber = '" & matric & "')"
+            sql = "DELETE FROM student WHERE (matricNumber = '" & matric & "')"
             MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()

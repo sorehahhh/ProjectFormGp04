@@ -132,3 +132,25 @@ C:\Users\user\Desktop\VB.Net Programming\ProjectDemoCRS1.1\ProjectDemoCRS1.1\Pro
 C:\Users\user\Desktop\VB.Net Programming\ProjectDemoCRS1.1\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.exe
 C:\Users\user\Desktop\VB.Net Programming\ProjectDemoCRS1.1\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.xml
 C:\Users\user\Desktop\VB.Net Programming\ProjectDemoCRS1.1\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.pdb
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe.config
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.pdb
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.xml
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.AssemblyReference.cache
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.CrsMainForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.LoginForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.Resources.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupListForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentListForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.TeacherListForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.TeacherForm.resources
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.GenerateResource.cache
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.CoreCompileInputs.cache
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.exe
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.xml
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.pdb
+C:\xampp\htdocs\ProjectFormGp04\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentForm2.resources

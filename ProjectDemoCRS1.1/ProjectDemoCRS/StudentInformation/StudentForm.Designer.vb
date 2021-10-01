@@ -38,12 +38,18 @@ Partial Class StudentForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.MaleRadioButton = New System.Windows.Forms.RadioButton()
+        Me.FemaleRadioButton = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.FemaleRadioButton)
+        Me.GroupBox1.Controls.Add(Me.MaleRadioButton)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.dobDateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.nameTextBox)
         Me.GroupBox1.Controls.Add(Me.classComboBox)
@@ -59,11 +65,11 @@ Partial Class StudentForm
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Nirmala UI", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(120, 58)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(9, 9, 9, 9)
+        Me.GroupBox1.Location = New System.Drawing.Point(80, 38)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(9, 9, 9, 9)
-        Me.GroupBox1.Size = New System.Drawing.Size(1023, 775)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.GroupBox1.Size = New System.Drawing.Size(682, 504)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Information"
@@ -72,67 +78,60 @@ Partial Class StudentForm
         '
         Me.dobDateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.HighlightText
         Me.dobDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dobDateTimePicker1.Location = New System.Drawing.Point(309, 326)
-        Me.dobDateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dobDateTimePicker1.Location = New System.Drawing.Point(206, 263)
         Me.dobDateTimePicker1.Name = "dobDateTimePicker1"
-        Me.dobDateTimePicker1.Size = New System.Drawing.Size(388, 50)
+        Me.dobDateTimePicker1.Size = New System.Drawing.Size(260, 36)
         Me.dobDateTimePicker1.TabIndex = 21
         '
         'nameTextBox
         '
         Me.nameTextBox.BackColor = System.Drawing.Color.SeaShell
-        Me.nameTextBox.Location = New System.Drawing.Point(309, 240)
-        Me.nameTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.nameTextBox.Location = New System.Drawing.Point(206, 156)
         Me.nameTextBox.Name = "nameTextBox"
-        Me.nameTextBox.Size = New System.Drawing.Size(391, 50)
+        Me.nameTextBox.Size = New System.Drawing.Size(262, 36)
         Me.nameTextBox.TabIndex = 20
         '
         'classComboBox
         '
         Me.classComboBox.BackColor = System.Drawing.Color.SeaShell
         Me.classComboBox.FormattingEnabled = True
-        Me.classComboBox.Location = New System.Drawing.Point(309, 483)
-        Me.classComboBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.classComboBox.Location = New System.Drawing.Point(206, 366)
         Me.classComboBox.Name = "classComboBox"
-        Me.classComboBox.Size = New System.Drawing.Size(391, 53)
+        Me.classComboBox.Size = New System.Drawing.Size(262, 38)
         Me.classComboBox.TabIndex = 19
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(14, 483)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(9, 369)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(94, 45)
+        Me.Label7.Size = New System.Drawing.Size(65, 30)
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Class"
         '
         'PhoneNumberTextBox
         '
         Me.PhoneNumberTextBox.BackColor = System.Drawing.Color.SeaShell
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(309, 406)
-        Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(206, 313)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
-        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(391, 50)
+        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(262, 36)
         Me.PhoneNumberTextBox.TabIndex = 16
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(14, 406)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(9, 319)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(247, 45)
+        Me.Label6.Size = New System.Drawing.Size(169, 30)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Phone Number"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(14, 326)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(9, 268)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(213, 45)
+        Me.Label5.Size = New System.Drawing.Size(147, 30)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Date of birth"
         '
@@ -140,10 +139,9 @@ Partial Class StudentForm
         '
         Me.CancelButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.CancelButton.ForeColor = System.Drawing.Color.White
-        Me.CancelButton.Location = New System.Drawing.Point(519, 612)
-        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CancelButton.Location = New System.Drawing.Point(346, 423)
         Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(176, 69)
+        Me.CancelButton.Size = New System.Drawing.Size(117, 45)
         Me.CancelButton.TabIndex = 7
         Me.CancelButton.Text = "Cancel"
         Me.CancelButton.UseVisualStyleBackColor = False
@@ -152,10 +150,9 @@ Partial Class StudentForm
         '
         Me.AddUpdateButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.AddUpdateButton.ForeColor = System.Drawing.Color.White
-        Me.AddUpdateButton.Location = New System.Drawing.Point(309, 612)
-        Me.AddUpdateButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.AddUpdateButton.Location = New System.Drawing.Point(206, 423)
         Me.AddUpdateButton.Name = "AddUpdateButton"
-        Me.AddUpdateButton.Size = New System.Drawing.Size(176, 69)
+        Me.AddUpdateButton.Size = New System.Drawing.Size(117, 45)
         Me.AddUpdateButton.TabIndex = 6
         Me.AddUpdateButton.Text = "Submit"
         Me.AddUpdateButton.UseVisualStyleBackColor = False
@@ -163,59 +160,84 @@ Partial Class StudentForm
         'icNumberTextBox
         '
         Me.icNumberTextBox.BackColor = System.Drawing.Color.SeaShell
-        Me.icNumberTextBox.Location = New System.Drawing.Point(309, 166)
-        Me.icNumberTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.icNumberTextBox.Location = New System.Drawing.Point(206, 108)
         Me.icNumberTextBox.Name = "icNumberTextBox"
-        Me.icNumberTextBox.Size = New System.Drawing.Size(391, 50)
+        Me.icNumberTextBox.Size = New System.Drawing.Size(262, 36)
         Me.icNumberTextBox.TabIndex = 4
         '
         'matricTextBox
         '
         Me.matricTextBox.BackColor = System.Drawing.Color.SeaShell
-        Me.matricTextBox.Location = New System.Drawing.Point(309, 88)
-        Me.matricTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.matricTextBox.Location = New System.Drawing.Point(206, 57)
         Me.matricTextBox.Name = "matricTextBox"
-        Me.matricTextBox.Size = New System.Drawing.Size(386, 50)
+        Me.matricTextBox.Size = New System.Drawing.Size(259, 36)
         Me.matricTextBox.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 243)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(9, 158)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(108, 45)
+        Me.Label3.Size = New System.Drawing.Size(74, 30)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Name"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 166)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(9, 108)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(177, 45)
+        Me.Label2.Size = New System.Drawing.Size(122, 30)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Ic Number"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 92)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(9, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(249, 45)
+        Me.Label1.Size = New System.Drawing.Size(172, 30)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Matric Number"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(9, 211)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(89, 30)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "Gender"
+        '
+        'MaleRadioButton
+        '
+        Me.MaleRadioButton.AutoSize = True
+        Me.MaleRadioButton.Location = New System.Drawing.Point(225, 209)
+        Me.MaleRadioButton.Name = "MaleRadioButton"
+        Me.MaleRadioButton.Size = New System.Drawing.Size(82, 34)
+        Me.MaleRadioButton.TabIndex = 23
+        Me.MaleRadioButton.TabStop = True
+        Me.MaleRadioButton.Text = "Male"
+        Me.MaleRadioButton.UseVisualStyleBackColor = True
+        '
+        'FemaleRadioButton
+        '
+        Me.FemaleRadioButton.AutoSize = True
+        Me.FemaleRadioButton.Location = New System.Drawing.Point(337, 209)
+        Me.FemaleRadioButton.Name = "FemaleRadioButton"
+        Me.FemaleRadioButton.Size = New System.Drawing.Size(104, 34)
+        Me.FemaleRadioButton.TabIndex = 24
+        Me.FemaleRadioButton.TabStop = True
+        Me.FemaleRadioButton.Text = "Female"
+        Me.FemaleRadioButton.UseVisualStyleBackColor = True
+        '
         'StudentForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1416, 894)
+        Me.ClientSize = New System.Drawing.Size(913, 518)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "StudentForm"
         Me.Text = "StudentForm"
         Me.GroupBox1.ResumeLayout(False)
@@ -239,4 +261,7 @@ Partial Class StudentForm
     Friend WithEvents PhoneNumberTextBox As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents FemaleRadioButton As RadioButton
+    Friend WithEvents MaleRadioButton As RadioButton
+    Friend WithEvents Label4 As Label
 End Class

@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Friend Structure SubjectRecord
-    Dim subjectCode, name, credit, email, phone, classGroup As String
+    Dim subjectCode, name, credit, classGroup As String
     ' Dim dob As Date
 End Structure
 Public Class Subject

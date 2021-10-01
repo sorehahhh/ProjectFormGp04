@@ -93,4 +93,7 @@
         End If
     End Sub
 
+    Private Sub MaleRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles MaleRadioButton.CheckedChanged
+
+    End Sub
 End Class

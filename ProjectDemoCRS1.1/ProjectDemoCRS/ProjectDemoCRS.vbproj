@@ -79,6 +79,11 @@
     <Compile Include="CrsMainForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ihsanTuitionCenterDbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ihsanTuitionCenterDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
@@ -114,6 +119,12 @@
       <DependentUpon>StudentGroupListForm.vb</DependentUpon>
     </Compile>
     <Compile Include="StudentGroup\StudentGroupListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentInformation\StudentForm2.Designer.vb">
+      <DependentUpon>StudentForm2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInformation\StudentForm2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentInformation\Student.vb" />
@@ -178,6 +189,9 @@
     <EmbeddedResource Include="StudentInformation\StudentForm.resx">
       <DependentUpon>StudentForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentInformation\StudentForm2.resx">
+      <DependentUpon>StudentForm2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentInformation\StudentListForm.resx">
       <DependentUpon>StudentListForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +209,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ihsanTuitionCenterDbDataSet.xsc">
+      <DependentUpon>ihsanTuitionCenterDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ihsanTuitionCenterDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ihsanTuitionCenterDbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ihsanTuitionCenterDbDataSet.xss">
+      <DependentUpon>ihsanTuitionCenterDbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

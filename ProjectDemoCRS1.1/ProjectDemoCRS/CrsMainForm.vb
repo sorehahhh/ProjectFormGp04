@@ -26,4 +26,8 @@
     Private Sub AddTeacherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddTeacherToolStripMenuItem.Click
         TeacherForm.ShowDialog()
     End Sub
+
+    Private Sub StudentList2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentList2ToolStripMenuItem.Click
+        StudentForm2.ShowDialog()
+    End Sub
 End Class

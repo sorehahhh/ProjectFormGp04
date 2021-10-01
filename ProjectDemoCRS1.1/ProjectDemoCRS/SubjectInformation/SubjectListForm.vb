@@ -119,4 +119,8 @@
     Private Sub displayAllButton_Click(sender As Object, e As EventArgs) Handles displayAllButton.Click
         displayAllSubject()
     End Sub
+
+    Private Sub ICButton_Click(sender As Object, e As EventArgs) Handles ICButton.Click
+
+    End Sub
 End Class
