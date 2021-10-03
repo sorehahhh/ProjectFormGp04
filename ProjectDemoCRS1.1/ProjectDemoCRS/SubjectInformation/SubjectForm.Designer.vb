@@ -29,9 +29,9 @@ Partial Class SubjectForm
         Me.AddUpdateButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.nameTextBox = New System.Windows.Forms.TextBox()
         Me.creditTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.nameTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -68,7 +68,7 @@ Partial Class SubjectForm
         Me.AddUpdateButton.Name = "AddUpdateButton"
         Me.AddUpdateButton.Size = New System.Drawing.Size(117, 53)
         Me.AddUpdateButton.TabIndex = 6
-        Me.AddUpdateButton.Text = "Submit"
+        Me.AddUpdateButton.Text = "Add"
         Me.AddUpdateButton.UseVisualStyleBackColor = False
         '
         'CancelButton
@@ -90,13 +90,6 @@ Partial Class SubjectForm
         Me.Label5.Size = New System.Drawing.Size(77, 30)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Credit"
-        '
-        'nameTextBox
-        '
-        Me.nameTextBox.Location = New System.Drawing.Point(203, 98)
-        Me.nameTextBox.Name = "nameTextBox"
-        Me.nameTextBox.Size = New System.Drawing.Size(262, 36)
-        Me.nameTextBox.TabIndex = 20
         '
         'creditTextBox
         '
@@ -126,6 +119,13 @@ Partial Class SubjectForm
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Subject Information"
         '
+        'nameTextBox
+        '
+        Me.nameTextBox.Location = New System.Drawing.Point(203, 99)
+        Me.nameTextBox.Name = "nameTextBox"
+        Me.nameTextBox.Size = New System.Drawing.Size(262, 36)
+        Me.nameTextBox.TabIndex = 20
+        '
         'SubjectForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -147,7 +147,7 @@ Partial Class SubjectForm
     Friend WithEvents AddUpdateButton As Button
     Friend WithEvents CancelButton As Button
     Friend WithEvents Label5 As Label
-    Friend WithEvents nameTextBox As TextBox
     Friend WithEvents creditTextBox As TextBox
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents nameTextBox As TextBox
 End Class

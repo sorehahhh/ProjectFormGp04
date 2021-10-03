@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class StudentForm
+Partial Class StudentRegInfoForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,8 +22,14 @@ Partial Class StudentForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentForm))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentRegInfoForm))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PostcodeTextBox = New System.Windows.Forms.TextBox()
+        Me.Address2TextBox = New System.Windows.Forms.TextBox()
+        Me.Address1TextBox = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.FemaleRadioButton = New System.Windows.Forms.RadioButton()
         Me.MaleRadioButton = New System.Windows.Forms.RadioButton()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,12 +47,6 @@ Partial Class StudentForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PostcodeTextBox = New System.Windows.Forms.TextBox()
-        Me.Address2TextBox = New System.Windows.Forms.TextBox()
-        Me.Address1TextBox = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -85,6 +85,57 @@ Partial Class StudentForm
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Information"
+        '
+        'PostcodeTextBox
+        '
+        Me.PostcodeTextBox.BackColor = System.Drawing.Color.SeaShell
+        Me.PostcodeTextBox.Location = New System.Drawing.Point(683, 159)
+        Me.PostcodeTextBox.Name = "PostcodeTextBox"
+        Me.PostcodeTextBox.Size = New System.Drawing.Size(262, 36)
+        Me.PostcodeTextBox.TabIndex = 30
+        '
+        'Address2TextBox
+        '
+        Me.Address2TextBox.BackColor = System.Drawing.Color.SeaShell
+        Me.Address2TextBox.Location = New System.Drawing.Point(683, 111)
+        Me.Address2TextBox.Name = "Address2TextBox"
+        Me.Address2TextBox.Size = New System.Drawing.Size(262, 36)
+        Me.Address2TextBox.TabIndex = 29
+        '
+        'Address1TextBox
+        '
+        Me.Address1TextBox.BackColor = System.Drawing.Color.SeaShell
+        Me.Address1TextBox.Location = New System.Drawing.Point(683, 60)
+        Me.Address1TextBox.Name = "Address1TextBox"
+        Me.Address1TextBox.Size = New System.Drawing.Size(259, 36)
+        Me.Address1TextBox.TabIndex = 28
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(486, 161)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(108, 30)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "Postcode"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(486, 111)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(116, 30)
+        Me.Label9.TabIndex = 26
+        Me.Label9.Text = "Address 2"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(486, 63)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(116, 30)
+        Me.Label10.TabIndex = 25
+        Me.Label10.Text = "Address 1"
         '
         'FemaleRadioButton
         '
@@ -242,57 +293,6 @@ Partial Class StudentForm
         Me.Label1.Size = New System.Drawing.Size(172, 30)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Matric Number"
-        '
-        'PostcodeTextBox
-        '
-        Me.PostcodeTextBox.BackColor = System.Drawing.Color.SeaShell
-        Me.PostcodeTextBox.Location = New System.Drawing.Point(683, 159)
-        Me.PostcodeTextBox.Name = "PostcodeTextBox"
-        Me.PostcodeTextBox.Size = New System.Drawing.Size(262, 36)
-        Me.PostcodeTextBox.TabIndex = 30
-        '
-        'Address2TextBox
-        '
-        Me.Address2TextBox.BackColor = System.Drawing.Color.SeaShell
-        Me.Address2TextBox.Location = New System.Drawing.Point(683, 111)
-        Me.Address2TextBox.Name = "Address2TextBox"
-        Me.Address2TextBox.Size = New System.Drawing.Size(262, 36)
-        Me.Address2TextBox.TabIndex = 29
-        '
-        'Address1TextBox
-        '
-        Me.Address1TextBox.BackColor = System.Drawing.Color.SeaShell
-        Me.Address1TextBox.Location = New System.Drawing.Point(683, 60)
-        Me.Address1TextBox.Name = "Address1TextBox"
-        Me.Address1TextBox.Size = New System.Drawing.Size(259, 36)
-        Me.Address1TextBox.TabIndex = 28
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(486, 161)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(108, 30)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "Postcode"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(486, 111)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(116, 30)
-        Me.Label9.TabIndex = 26
-        Me.Label9.Text = "Address 2"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(486, 63)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(116, 30)
-        Me.Label10.TabIndex = 25
-        Me.Label10.Text = "Address 1"
         '
         'StudentForm
         '

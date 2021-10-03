@@ -86,11 +86,11 @@ Partial Class SubjectListForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(99, 40)
+        Me.Label1.Location = New System.Drawing.Point(41, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(117, 30)
+        Me.Label1.Size = New System.Drawing.Size(173, 30)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "IC / Name"
+        Me.Label1.Text = "Subject / Name"
         '
         'searchTextBox
         '
@@ -104,7 +104,7 @@ Partial Class SubjectListForm
         Me.updateSubjectButton.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.updateSubjectButton.Font = New System.Drawing.Font("Nirmala UI", 18.15652!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.updateSubjectButton.Location = New System.Drawing.Point(319, 500)
-        Me.updateSubjectButton.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.updateSubjectButton.Margin = New System.Windows.Forms.Padding(6)
         Me.updateSubjectButton.Name = "updateSubjectButton"
         Me.updateSubjectButton.Size = New System.Drawing.Size(209, 60)
         Me.updateSubjectButton.TabIndex = 17
@@ -115,10 +115,10 @@ Partial Class SubjectListForm
         '
         Me.AddSubjectButton.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.AddSubjectButton.Font = New System.Drawing.Font("Nirmala UI", 18.15652!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddSubjectButton.Location = New System.Drawing.Point(86, 500)
-        Me.AddSubjectButton.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.AddSubjectButton.Location = New System.Drawing.Point(5, 500)
+        Me.AddSubjectButton.Margin = New System.Windows.Forms.Padding(6)
         Me.AddSubjectButton.Name = "AddSubjectButton"
-        Me.AddSubjectButton.Size = New System.Drawing.Size(209, 60)
+        Me.AddSubjectButton.Size = New System.Drawing.Size(308, 60)
         Me.AddSubjectButton.TabIndex = 16
         Me.AddSubjectButton.Text = "Add New Subject"
         Me.AddSubjectButton.UseVisualStyleBackColor = False
@@ -128,7 +128,7 @@ Partial Class SubjectListForm
         Me.DeleteSubjectButton.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.DeleteSubjectButton.Font = New System.Drawing.Font("Nirmala UI", 18.15652!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DeleteSubjectButton.Location = New System.Drawing.Point(569, 500)
-        Me.DeleteSubjectButton.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.DeleteSubjectButton.Margin = New System.Windows.Forms.Padding(6)
         Me.DeleteSubjectButton.Name = "DeleteSubjectButton"
         Me.DeleteSubjectButton.Size = New System.Drawing.Size(228, 60)
         Me.DeleteSubjectButton.TabIndex = 15

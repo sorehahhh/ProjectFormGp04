@@ -81,4 +81,7 @@
         End If
     End Sub
 
+    Private Sub subjectCodeTextBox_TextChanged(sender As Object, e As EventArgs) Handles subjectCodeTextBox.TextChanged
+
+    End Sub
 End Class

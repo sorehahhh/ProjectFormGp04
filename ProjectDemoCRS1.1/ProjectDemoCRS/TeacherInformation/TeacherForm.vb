@@ -112,4 +112,26 @@
 
     End Sub
 
+    Private Sub StudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.subjectCodeBox.Items.Add("1103")
+        Me.subjectCodeBox.Items.Add("1119")
+        Me.subjectCodeBox.Items.Add("1223")
+        Me.subjectCodeBox.Items.Add("1225")
+        Me.subjectCodeBox.Items.Add("1249")
+        Me.subjectCodeBox.Items.Add("1449")
+        Me.subjectCodeBox.Items.Add("1511")
+        Me.subjectCodeBox.Items.Add("3472")
+        Me.subjectCodeBox.Items.Add("4531")
+        Me.subjectCodeBox.Items.Add("4541")
+        Me.subjectCodeBox.Items.Add("4551")
+        Me.subjectCodeBox.Items.Add("4561")
+        Me.subjectCodeBox.Items.Add("3765")
+    End Sub
+
+    Private Sub classComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles subjectCodeBox.SelectedIndexChanged
+        ' Just to see a visual of what was selected
+        Dim selectedItem = CType(subjectCodeBox.SelectedItem, String)
+        Dim resultIndex As Integer = subjectCodeBox.FindStringExact(subjectCodeBox.SelectedItem)
+        ' Me.ComboBox2.Items.RemoveAt(resultIndex)
+    End Sub
 End Class

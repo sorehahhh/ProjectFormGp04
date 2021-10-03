@@ -1,5 +1,5 @@
-﻿Public Class StudentForm
-    Dim myStudent As New Student
+﻿Public Class StudentRegInfoForm
+    Dim myStudent As New StudentRegInfo
     ' Dim theStudentGroupRecord As StudentGroupRecord
     Dim OldStudentRec As StudentRecord
 
@@ -121,5 +121,20 @@
             FemaleRadioButton.Checked = True
         End If
 
+    End Sub
+
+    Private Sub StudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.classComboBox.Items.Add("P1_MERAH")
+        Me.classComboBox.Items.Add("P2_MERAH")
+        Me.classComboBox.Items.Add("P3_BIRU")
+        Me.classComboBox.Items.Add("P4_BIRU")
+        Me.classComboBox.Items.Add("P5_BIRU")
+    End Sub
+
+    Private Sub classComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles classComboBox.SelectedIndexChanged
+        ' Just to see a visual of what was selected
+        Dim selectedItem = CType(classComboBox.SelectedItem, String)
+        Dim resultIndex As Integer = classComboBox.FindStringExact(classComboBox.SelectedItem)
+        ' Me.ComboBox2.Items.RemoveAt(resultIndex)
     End Sub
 End Class

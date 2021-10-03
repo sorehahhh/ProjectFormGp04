@@ -3,7 +3,7 @@ Friend Structure StudentRecord
     Dim matric, ic, name, email, phone, classGroup, gender, address1, address2, postcode As String
     Dim dob As Date
 End Structure
-Public Class Student
+Public Class StudentRegInfo
 
     Private con As New OleDb.OleDbConnection
     Friend Function getStudentRecord(matric) As StudentRecord

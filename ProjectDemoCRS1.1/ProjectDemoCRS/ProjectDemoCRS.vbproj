@@ -140,6 +140,19 @@
     <Compile Include="StudentInformation\StudentListForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="StudentRegistrationInformation\StudentRegInfoForm.Designer.vb">
+      <DependentUpon>StudentRegInfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistrationInformation\StudentRegInfoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentRegistrationInformation\StudentRegInfo.vb" />
+    <Compile Include="StudentRegistrationInformation\StudentRegInfoListForm.Designer.vb">
+      <DependentUpon>StudentRegInfoListForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistrationInformation\StudentRegInfoListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SubjectInformation\SubjectListForm.Designer.vb">
       <DependentUpon>SubjectListForm.vb</DependentUpon>
     </Compile>
@@ -194,6 +207,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentInformation\StudentListForm.resx">
       <DependentUpon>StudentListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegistrationInformation\StudentRegInfoForm.resx">
+      <DependentUpon>StudentRegInfoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegistrationInformation\StudentRegInfoListForm.resx">
+      <DependentUpon>StudentRegInfoListForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectInformation\SubjectListForm.resx">
       <DependentUpon>SubjectListForm.vb</DependentUpon>
